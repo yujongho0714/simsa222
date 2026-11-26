@@ -484,4 +484,5 @@ $('#tpl').onclick=()=>{const a=document.createElement('a');a.href=URL.createObje
 $('#xf').onchange=async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;try{const R=pick(await unz(await f.arrayBuffer()));if(!R)throw 0;const r=parseR(R);if(!r.d.length){alert('합격으로 적힌 친구를 찾지 못했어요. 결과 칸에 합격이라고 써 주세요.');return}
  const m=f.name.match(/(\d{4})-(\d{1,2})/),n=new Date();MONTH=m?m[1]+'-'+m[2].padStart(2,'0'):n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0');DATA=r.d;fg.clear();fc.clear();fb.clear();sel=new Set;render();alert('합격 '+r.d.length+'명을 불러왔어요 (미응심·불합격 '+r.sk+'명 제외)')}catch(_){alert('엑셀(.xlsx)을 읽지 못했어요. 서식을 내려받아 작성했는지 확인해 주세요.')}};
 load();sel=new Set;render();
-</script></body></html>
+</script><script src="https://yujongho0714.github.io/allinone/back-guard.js" defer></script>
+</body></html>
